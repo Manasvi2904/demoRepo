@@ -1,0 +1,35 @@
+curl --location 'https://56.5.225.39:8442/IPAM/utilityRequests/?operation=estimatedBatteryBackupDashboard' \
+--header 'Content-Type: application/json' \
+--data '{"startTime":"2024-03-13-00:00:00","endTime":"2024-03-14-00:00:00"}'
+
+
+curl --location 'https://56.5.225.39:8442/IPAM/utilityRequests/?operation=estimatedBatteryBackupTable' \
+--header 'Content-Type: application/json' \
+--data '{"startTime":"2024-03-13-00:00:00","endTime":"2024-03-14-00:00:00"}'
+
+
+curl --location --request POST 'https://dev.jioipm.jiolabs.com:8442/IPAM/utilityRequests/?operation=fullInventoryDump' \
+--header 'operationType: batteryPerformanceDashboard' \
+--header 'frequency: daily'
+
+
+
+code backup
+/*
+					 * json.put(EsParameterConstants.RJ_R4G_STATE_NAME,
+					 * map.get(EsParameterConstants.RJ_R4G_STATE_NAME));
+					 * json.put(EsParameterConstants.UTILITY_SAP_ID,
+					 * map.get(EsParameterConstants.UTILITY_SAP_ID));
+					 * json.put(EsParameterConstants.RJ_MAINTENANCE_NAME,
+					 * map.get(EsParameterConstants.RJ_MAINTENANCE_NAME));
+					 * json.put(EsParameterConstants.RJ_JC_NAME,
+					 * map.get(EsParameterConstants.RJ_JC_NAME)); json.put("Type", map.get("Type"));
+					 * json.put(EsParameterConstants.ENERGY_TYPE,
+					 * map.get(EsParameterConstants.ENERGY_TYPE));
+					 * json.put(UtilityEsParamConstants.UTILITY_INSTANCE,
+					 * map.get(UtilityEsParamConstants.UTILITY_INSTANCE));
+					 * 
+					 * json.put(UtilityEsParamConstants.ESTIMATED_BATTERY_BACKUP_DURATION_FIELD,
+					 * df.format(map.get(UtilityEsParamConstants.
+					 * ESTIMATED_BATTERY_BACKUP_DURATION_FIELD)));
+					 */
